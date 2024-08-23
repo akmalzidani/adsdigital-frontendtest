@@ -1,10 +1,15 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { lexendDeca } from "@/app/ui/fonts";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import { useState } from "react";
+import { Input } from "../input";
 
 export default function RegisterForm() {
+  const [phoneNumber, setPhoneNumber] = useState("");
+
   return (
     <div className="max-w-[314px] md:max-w-[466px] md:px-[30px] md:py-10 md:bg-white rounded-[10px] md:flex md:flex-col md:justify-center md:h-fit md:shadow-lg">
       <h3 className={`${lexendDeca.className} text-2xl font-bold text-center `}>
@@ -18,14 +23,26 @@ export default function RegisterForm() {
           <Input type="email" name="email" placeholder="Email" />
           <Input type="text" name="username" placeholder="Username " />
 
-          <Input
+          <PhoneInput
+            placeholder="Whatsapp Phone Number"
+            enableAreaCodes={true}
+            enableSearch={true}
+            containerClass="text-xs"
+            inputClass="min-w-full py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0"
+            country={"id"}
+            value={phoneNumber}
+            onChange={(e) => {
+              setPhoneNumber(e);
+            }}
+          />
+          {/* <Input
             type="text"
             maxLength={12}
             id="phoneNumber"
             name="phoneNumber"
             pattern="\d{10,12}"
             placeholder="Whatsapp Phone Number"
-          />
+          /> */}
 
           <Input type="password" name="password" placeholder="Password" />
           <div className="px-5 py-3 bg-netral-foreground">

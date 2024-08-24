@@ -6,6 +6,8 @@ module.exports = {
     "./components/**/*.{js,jsx}",
     "./app/**/*.{js,jsx}",
     "./src/**/*.{js,jsx}",
+    "./node_modules/flowbite-react/lib/**/*.js",
+    "./node_modules/flowbite/**/*.js",
   ],
   prefix: "",
   theme: {
@@ -56,6 +58,9 @@ module.exports = {
           foreground: "hsl(var(--netral-foreground))",
           teks: "hsl(var(--netral-teks))",
         },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -78,5 +83,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("flowbite/plugin")],
 };

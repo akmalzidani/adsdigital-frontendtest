@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply scroll-smooth;
+}
+
 @layer base {
   :root {
     --netral: 214, 58%, 95%;
     --netral-foreground: 216, 26%, 96%;
     --netral-teks: 222, 7%, 50%;
+    --warning: 39, 100%, 56%;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -38,6 +43,7 @@
     --netral: 214, 58%, 95%;
     --netral-foreground: 216, 26%, 96%;
     --netral-teks: 222, 7%, 50%;
+    --warning: 39, 100%, 56%;
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;

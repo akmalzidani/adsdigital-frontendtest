@@ -12,7 +12,9 @@ export default function RegisterForm() {
 
   return (
     <div className="max-w-[314px] md:max-w-[466px] md:px-[30px] md:py-10 md:bg-white rounded-[10px] md:flex md:flex-col md:justify-center md:h-fit md:shadow-lg">
-      <h3 className={`${lexendDeca.className} text-2xl font-bold text-center `}>
+      <h3
+        className={`${lexendDeca.className} antialiased text-2xl font-bold text-center `}
+      >
         Welcome to Forwardin
       </h3>
       <p className="text-sm text-center">
@@ -21,14 +23,14 @@ export default function RegisterForm() {
       <form action="">
         <div className="flex flex-col gap-4 py-7">
           <Input type="email" name="email" placeholder="Email" />
-          <Input type="text" name="username" placeholder="Username " />
+          <Input type="text" name="username" placeholder="Username" />
 
           <PhoneInput
             placeholder="Whatsapp Phone Number"
             enableAreaCodes={true}
             enableSearch={true}
             containerClass="text-xs"
-            inputClass="min-w-full py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0"
+            inputClass="border-input bg-background file:border-0 file:bg-transparent file:text-sm file:font-medium min-w-full py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0"
             country={"id"}
             value={phoneNumber}
             onChange={(e) => {
